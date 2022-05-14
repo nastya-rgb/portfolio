@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;0,700;1,400&display=swap');
+/* ctrl+p then >google fonts then if we use cyrillic add comand &display=swap&subset=cyrillic-ext  */
+
+:root {
+    --color-black: #070707;
+    --color-gray: #828282;
+    --color-violet: #A259FF;
+    --color-softViolet: #a159ff33;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 7.5px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #e0dede;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--color-violet);
+}
+
+*::selection {
+    background: var(--color-black);
+    color: #fff;
+}
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    line-height: calc((22 / 18) * 100%);
+    color: #070707;
+    height: 100vh;
+
+}
+
+.offer {
+    overflow: hidden;
+}
+
+/*------------------------------- HEADER SECTION START ---------------------------------------*/
+.header {
+    position: fixed;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transform: translateY(0px);
+    transition: transform 0.3s ease-in-out 0s;
+}
+
+.header_hidden {
+    transform: translateY(-100px);
+}
+
+._container {
+    max-width: 1087px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header__container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header__nav {
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    background: rgba(254, 253, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: 0.5s;
+}
+
+.header__list {
+    min-height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav__link {
+    padding: 10px;
+}
+
+.nav__link:hover,
+:focus {
+    color: var(--color-violet)
+}
+
+
+/*------------------------------- BANER SECTION START ---------------------------------------*/
+.main {
+    flex: 1 1 auto;
+}
+
+.main-block__content {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 121%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.title:first-letter {
+    color: var(--color-violet);
+    font-size: 60px;
+}
+
+.main-block__text {
+    color: var(--color-violet);
+}
+
+.text {
+
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.textAbout__subtitle {
+    text-align: center;
+    font-size: 22px;
+
+}
+
+.main-block__textAbout {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    font-size: 18px;
+    font-weight: 400;
+
+
+}
+
+
+.main-block__icon {
+    --fa-animation-duration: 3s;
+    font-size: 58px;
+    color: #A259FF;
+    position: relative;
+    top: -20px;
+    left: 50%;
+    margin-bottom: 30px;
+
+}
+
+.main-block__body{
+    position: relative;
+}
+
+.main-block__avatar img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*------------------------------- SKILLS SECTION START ---------------------------------------*/
+
+.skills__offer {}
+
+.skills__body {
+    /* background-color: #a159ff33; */
+    background-color: var(--color-softViolet);
+    margin-top: 10px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.slills__title {
+    color: #000;
+}
+
+.skills__text {
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+  
+}
+
+.skills__about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+ 
+}
+
+.skills__about_icon {
+
+}
+
+.skills__about_icon {
+    --fa-animation-duration: 2s;
+    
+    font-size: 110px;
+   
+    
+}
+.skills__about_icon:not(:last-child){
+      margin-right: 40px;
+      
+}
+
+.icon_css {
+    color: rgb(46, 163, 213);
+}
+
+.icon_html {
+    color: rgb(229, 96, 39);
+}
+
+.icon_js {
+    color: rgb(234, 212, 28);
+}
+
+.icon_gh {
+    color: rgb(245,77,39);
+}
+
+.icon_fg {
+    color: rgb(147, 87, 231);
+}
+
+
+
+
+/*------------------------------- PORTFOLIO SECTION START ---------------------------------------*/
+
+.portfolio__offer {}
+
+.portfolio__title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.portfolio__text {}
+
+.portfolio__card1 {}
+
+.card1__pic {}
+
+/* PORTFOLIO CARD */
+
+
+
+/*------------------------------- CONTACTS SECTION START ---------------------------------------*/
+
+
+.contact__container {}
+
+.contact__header-block {}
+
+.contact__title {}
+
+.contact__text {}
+
+.contact__body {}
+
+.contact__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact__item:not(:last-child) {
+    margin-right: 61px;
+}
+
+.contact__link {}
+
+.contact__icon {
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.contact__icon_tel {
+    font-size: 30px;
+}
+
+.contact__icon_tel {
+    font-size: 35px;
+}
+/*------------------------------- FOOTER START ---------------------------------------*/
+
+.footer__title{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+/* PC */
+@media(max-width: 1087px) {
+    .container {
+        max-width: 980px;
+    }
+}
+
+/* TABLET */
+@media(max-width: 991.98px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .about__icon {
+        font-size: 100px;
+    }
+
+    .nav__link {
+        font-size: 20px;
+
+    }
+
+
+
+}
+
+/* MOBILE */
+@media(max-width: 767.98px) {
+    .container {
+        max-width: 650px;
+    }
+
+
+}
+
+@media (max-width:660px) {
+    /*------------------------------- MEDIA HEADER START ---------------------------------------*/
+    .header__list {
+        min-height: 65px;
+    }
+
+    .nav__item a span {
+        font-size: 0px !important;
+    }
+
+    .nav__item a i {
+        font-size: 25px !important;
+    }
+  /*------------------------------- MEDIA BANER-SECTION START ---------------------------------------*/
+
+    .main-block__avatar img {
+        height: 190px;
+        width: 190px;
+    }
+
+    .main-block__textAbout {
+        font-size: 16px;
+    }
+    .main-block__icon{
+        left: 44%;
+    }
+
+    .textAbout__subtitle {
+        font-size: 18px;
+    }
+
+  /*------------------------------- MEDIA SKILLS-SECTION START ---------------------------------------*/
+
+    .about__icon {
+        font-size: 60px;
+        
+    }
+    .skills__about{
+        justify-content: space-between;
+        margin: 15px;
+    }
+    .skills__about_icon:not(:last-child) {
+     margin-right: 15px;
+    
+    }
+    .skills__text {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .title:first-letter {
+        font-size: 40px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+     /*------------------------------- MEDIA CONTACT-SECTION START ---------------------------------------*/
+    .contact__icon {
+        font-size: 25px;
+
+    }
+    .contact__item:not(:last-child) {
+        margin-right: 31px;
+    }
+
+}
