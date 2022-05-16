@@ -13,8 +13,7 @@ window.addEventListener("scroll", () => {
         header.classList.remove("header_hidden")
     }
     lastScrollTop = scrollTop;
-}),
+});
   
-    
-    document.getElementById('focusmeplease').focus();
+
 

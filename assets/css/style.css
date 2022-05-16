@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;0,700;1,400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;0,700;1,400&display=swap'); */
 /* ctrl+p then >google fonts then if we use cyrillic add comand &display=swap&subset=cyrillic-ext  */
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 
 :root {
     --color-black: #070707;
@@ -27,7 +28,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: "Roboto";
     background-color: #FFFFFF;
     font-size: 18px;
     line-height: calc((22 / 18) * 100%);
@@ -109,15 +110,23 @@ body {
 
 .title {
     font-weight: 500;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 121%;
     margin-bottom: 10px;
     text-align: center;
+    isolation: isolate;
+}
+.text__violet{
+color: #A259FF;
+margin: 10px 0 10px 0;
 }
 
+.textAbout__discription{
+padding: 0 10px;
+}
 .title:first-letter {
     color: var(--color-violet);
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .main-block__text {
@@ -125,10 +134,11 @@ body {
 }
 
 .text {
-
+    padding: 0 25px;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
+    
 }
 
 .textAbout__subtitle {
@@ -151,9 +161,8 @@ body {
     --fa-animation-duration: 3s;
     font-size: 58px;
     color: #A259FF;
-    position: relative;
-    top: -20px;
-    left: 50%;
+    display: flex;
+    justify-content: center;
     margin-bottom: 30px;
 
 }
@@ -174,7 +183,9 @@ body {
 
 /*------------------------------- SKILLS SECTION START ---------------------------------------*/
 
-.skills__offer {}
+.skills__offer {
+    isolation: isolate;
+}
 
 .skills__body {
     /* background-color: #a159ff33; */
@@ -192,31 +203,24 @@ body {
     color: #000;
     text-align: center;
     margin-bottom: 20px;
+   
   
 }
 
 .skills__about {
+ display: grid;
+ justify-content: center;
+ gap: 15px 15px;
+ grid-template-columns: repeat(5, 70px);
+}
+
+.skills__about_icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
- 
-}
-
-.skills__about_icon {
-
-}
-
-.skills__about_icon {
-    --fa-animation-duration: 2s;
     
-    font-size: 110px;
-   
-    
-}
-.skills__about_icon:not(:last-child){
-      margin-right: 40px;
-      
+    font-size: 80px;
+
 }
 
 .icon_css {
@@ -244,7 +248,7 @@ body {
 
 /*------------------------------- PORTFOLIO SECTION START ---------------------------------------*/
 
-.portfolio__offer {}
+.portfolio__offer {   isolation: isolate;}
 
 .portfolio__title {
     text-align: center;
@@ -264,13 +268,13 @@ body {
 /*------------------------------- CONTACTS SECTION START ---------------------------------------*/
 
 
-.contact__container {}
+.contact__container {margin-top: 20px;  }
 
 .contact__header-block {}
 
 .contact__title {}
 
-.contact__text {}
+.contact__text {isolation: isolate;}
 
 .contact__body {}
 
@@ -308,6 +312,30 @@ body {
     font-size: 16px;
 }
 
+.darkmode--activated .title{
+    color: rgb(255, 253, 226);
+}
+.darkmode--activated .text{
+    color: rgb(255, 253, 226);
+}
+.darkmode--activated .nav__link span{
+    color: rgb(255, 253, 226);
+}
+.darkmode--activated .nav__link{
+    color:var(--color-violet)
+}
+.darkmode--activated .textAbout{
+    color: rgb(255, 253, 226);
+}
+.darkmode--activated .skills__offer{
+    background-color:rgb(34,34,34);
+}
+ .darkmode-toggle {
+    z-index: 500;
+  }
+  
+
+
 /* PC */
 @media(max-width: 1087px) {
     .container {
@@ -321,9 +349,7 @@ body {
         max-width: 750px;
     }
 
-    .about__icon {
-        font-size: 100px;
-    }
+   
 
     .nav__link {
         font-size: 20px;
@@ -366,38 +392,36 @@ body {
     .main-block__textAbout {
         font-size: 16px;
     }
-    .main-block__icon{
-        left: 44%;
+    .text__violet{
+       font-weight: 500;
+    }
+    .main-block__text{
+        font-weight: 500;
     }
 
     .textAbout__subtitle {
         font-size: 18px;
+        
     }
 
   /*------------------------------- MEDIA SKILLS-SECTION START ---------------------------------------*/
 
-    .about__icon {
-        font-size: 60px;
-        
-    }
-    .skills__about{
-        justify-content: space-between;
-        margin: 15px;
-    }
-    .skills__about_icon:not(:last-child) {
-     margin-right: 15px;
-    
-    }
+  
     .skills__text {
         font-size: 18px;
     }
-
+.skills__about{
+    display: grid;
+    justify-content: center;
+    gap: 15px 15px;
+    grid-template-columns: repeat(3, 70px);
+}
     .title {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .title:first-letter {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .text {
